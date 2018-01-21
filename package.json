@@ -1,0 +1,19 @@
+{
+  "name": "multidb",
+  "version": "0.1.0",
+  "description": "A database API abstraction library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan-thinnes/multidb.git"
+  },
+  "author": "Dylan Thinnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylan-thinnes/multidb/issues"
+  },
+  "homepage": "https://github.com/dylan-thinnes/multidb#readme"
+}
