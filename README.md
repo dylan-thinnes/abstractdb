@@ -1,2 +1,2 @@
-# multidb
+# abstractdb
 Database API abstraction library.
