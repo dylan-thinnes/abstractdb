@@ -1,6 +1,6 @@
 {
   "name": "abstractdb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A database API abstraction library.",
   "main": "index.js",
   "scripts": {

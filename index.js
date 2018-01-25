@@ -37,11 +37,13 @@ BS3DB.prototype.sGeneric = function (fName, statement, parameters) {
 }
 BS3DB.prototype.sGet = function (statement, parameters) { return this.sGeneric("get", statement, parameters); }
 BS3DB.prototype.sRun = function (statement, parameters) { return this.sGeneric("run", statement, parameters); }
+BS3DB.prototype.sAll = function (statement, parameters) { return this.sGeneric("all", statement, parameters); }
 
 //Define asynchoronous abstractions of better-sqlite3 functions
 BS3DB.prototype.aGeneric = async function () { return this.sGeneric(...arguments); }
 BS3DB.prototype.aGet = function (statement, parameters) { return this.aGeneric("get", statement, parameters); }
 BS3DB.prototype.aRun = function (statement, parameters) { return this.aGeneric("run", statement, parameters); }
+BS3DB.prototype.aAll = function (statement, parameters) { return this.aGeneric("all", statement, parameters); }
 
 //S3DB is a class which optionally creates an sqlite3 database and then abstracts it.
 var S3DB = function (path, options) {
@@ -75,6 +77,7 @@ S3DB.prototype.aGeneric = function (fName, statement, parameters) {
 }
 S3DB.prototype.aGet = function (statement, parameters) { return this.aGeneric("get", statement, parameters); }
 S3DB.prototype.aRun = function (statement, parameters) { return this.aGeneric("run", statement, parameters); }
+S3DB.prototype.aAll = function (statement, parameters) { return this.aGeneric("all", statement, parameters); }
 
 //Define a rather silly implementation of synchronous results. I very strongly recommend users stick to using async/await with aGeneric
 S3DB.prototype.sGeneric = function (fName, statement, parameters) {
@@ -90,3 +93,4 @@ S3DB.prototype.sGeneric = function (fName, statement, parameters) {
 }
 S3DB.prototype.sGet = function (statement, parameters) { return this.sGeneric("get", statement, parameters); }
 S3DB.prototype.sRun = function (statement, parameters) { return this.sGeneric("run", statement, parameters); }
+S3DB.prototype.sAll = function (statement, parameters) { return this.sGeneric("all", statement, parameters); }
